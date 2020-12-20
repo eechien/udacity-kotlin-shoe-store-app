@@ -16,4 +16,8 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="FragmentTitleTextStyle">
+        <item name="android:textSize">40dp</item>
+    </style>
+
 </resources>
