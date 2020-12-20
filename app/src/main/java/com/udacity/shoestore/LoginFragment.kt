@@ -28,4 +28,5 @@ class LoginFragment : Fragment() {
 
         return binding.root
     }
+    // TODO, actually do something with the email+password
 }
