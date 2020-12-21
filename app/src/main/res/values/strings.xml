@@ -8,10 +8,14 @@
     <string name="email_text">Email Address:</string>
     <string name="password_text">Password:</string>
 
-    <!-- Welcome gragment -->
+    <!-- Welcome fragment -->
     <string name="welcome_text">Welcome to the Shoe Store</string>
     <string name="welcome_description_text">
         In this app you can view an inventory of shoes,
         add, update, and remove shoes from that inventory.
     </string>
+
+    <!-- Instructions fragment -->
+    <string name="instructions_text">Instructions</string>
+    <string name="instructions_description_text">Do some things...</string>
 </resources>
