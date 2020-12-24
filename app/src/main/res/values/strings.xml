@@ -11,11 +11,24 @@
     <!-- Welcome fragment -->
     <string name="welcome_text">Welcome to the Shoe Store</string>
     <string name="welcome_description_text">
-        In this app you can view an inventory of shoes,
+        In this app you can view an inventory of your shoes,
         add, update, and remove shoes from that inventory.
     </string>
 
     <!-- Instructions fragment -->
     <string name="instructions_text">Instructions</string>
     <string name="instructions_description_text">Do some things...</string>
+    <string name="view_shoes_button_text">View Shoes</string>
+    <string name="add_shoe_button_text">Add Shoe</string>
+
+    <!-- Shoe List fragment -->
+    <string name="view_shoe_button_text">View Shoe</string>
+
+    <!-- Shoe detail fragment -->
+    <string name="save_changes_button_text">Save Shoe</string>
+    <string name="cancel_button_text">Cancel</string>
+    <string name="shoe_name_text">Name of shoe</string>
+    <string name="shoe_size_text">Size</string>
+    <string name="shoe_brand_text">Brand</string>
+    <string name="shoe_description_text">Description</string>
 </resources>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- TODO add image button -->
+
+    <data>
+        <variable
+            name="shoeListViewModel"
+            type="com.udacity.shoestore.shoelist.ShoeListViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.udacity.shoestore.shoe.ShoeDetailFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shoeNameTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/shoeSizeTextInputLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="199dp">
+
+            <TextView
+                android:id="@+id/shoeNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shoe_name_text" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shoeNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shoeSizeTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/shoeBrandTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@id/shoeNameTextInputLayout">
+
+            <TextView
+                android:id="@+id/shoeSizeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/shoe_size_text" />
+
+            <EditText
+                android:id="@+id/shoeSizeInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shoeBrandTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/shoeDescriptionTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeTextInputLayout">
+
+            <TextView
+                android:id="@+id/shoeBrandText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/shoe_brand_text" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shoeBrandInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- TODO Add shoe size input -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shoeDescriptionTextInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/saveShoeButton"
+            app:layout_constraintTop_toBottomOf="@+id/shoeBrandTextInputLayout"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/shoeDescriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/shoe_description_text" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shoeDescriptionInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="hint" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/saveShoeButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/saveShoeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_changes_button_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
