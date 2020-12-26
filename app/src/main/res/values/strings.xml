@@ -19,7 +19,6 @@
     <string name="instructions_text">Instructions</string>
     <string name="instructions_description_text">Do some things...</string>
     <string name="view_shoes_button_text">View Shoes</string>
-    <string name="add_shoe_button_text">Add Shoe</string>
 
     <!-- Shoe List fragment -->
     <string name="view_shoe_button_text">View Shoe</string>

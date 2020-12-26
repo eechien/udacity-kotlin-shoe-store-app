@@ -25,10 +25,6 @@ class InstructionsFragment : Fragment() {
         )
         val navController = findNavController()
 
-        binding.addShoeButton.setOnClickListener { view ->
-            navController.navigate(R.id.action_instructionsFragment_to_shoeDetailFragment)
-        }
-
         binding.viewShoesButton.setOnClickListener { view ->
             navController.navigate(R.id.action_instructionsFragment_to_shoeListFragment)
         }
