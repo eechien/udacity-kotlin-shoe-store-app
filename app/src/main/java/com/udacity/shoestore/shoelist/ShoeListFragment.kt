@@ -50,9 +50,6 @@ class ShoeListFragment: Fragment() {
             shoeView.findViewById<TextView>(R.id.sizeText).text = shoe.size.toString()
             shoeView.findViewById<TextView>(R.id.brandText).text = shoe.brand
             shoeView.findViewById<TextView>(R.id.descriptionText).text = shoe.description
-            shoeView.findViewById<Button>(R.id.viewShoeButton).setOnClickListener { view ->
-                navController.navigate(R.id.action_shoeListFragment_to_shoeDetailFragment) // TODO pass in shoe values
-            }
         }
     }
 

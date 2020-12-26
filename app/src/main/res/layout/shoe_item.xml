@@ -52,13 +52,6 @@
                 android:layout_weight="1"
                 android:text="@{shoe.description" />
         </LinearLayout>
-
-        <Button
-            android:id="@+id/viewShoeButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/view_shoe_button_text" />
     </LinearLayout>
 
 </layout>
