@@ -31,6 +31,10 @@ class WelcomeFragment : Fragment() {
             navController.navigate(R.id.loginFragment)
         }
 
+        binding.instructionsButton.setOnClickListener { view ->
+            navController.navigate(R.id.action_welcomeFragment_to_instructionsFragment)
+        }
+
         return binding.root
     }
 }
