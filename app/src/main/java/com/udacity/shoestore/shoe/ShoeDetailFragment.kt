@@ -26,7 +26,6 @@ class ShoeDetailFragment: Fragment() {
                 container,
                 false
         )
-        binding.shoeListViewModel = viewModel
         binding.lifecycleOwner = this // TODO what is this for?
 
         val navController = findNavController()
