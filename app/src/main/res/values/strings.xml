@@ -30,4 +30,5 @@
     <string name="shoe_size_text">Size</string>
     <string name="shoe_brand_text">Brand</string>
     <string name="shoe_description_text">Description</string>
+    <string name="add_images_button_text">Add Images</string>
 </resources>
