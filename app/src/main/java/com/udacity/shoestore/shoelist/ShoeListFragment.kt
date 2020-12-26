@@ -1,16 +1,15 @@
 package com.udacity.shoestore.shoelist
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
+import android.view.*
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 
@@ -23,6 +22,7 @@ class ShoeListFragment: Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        setHasOptionsMenu(true)
         binding = DataBindingUtil.inflate(
                 inflater,
                 R.layout.fragment_shoe_list,
@@ -38,11 +38,10 @@ class ShoeListFragment: Fragment() {
         }
 
         addShoes()
-
         return binding.root
     }
 
-    private fun addShoes() {
+    private fun addShoes() { // tODO change this to a listener
         var linearLayout= binding.shoeListLinearLayoutView
         for (shoe in viewModel.shoeList.value!!) {
             var shoeView = View.inflate(linearLayout.context, R.layout.shoe_item, linearLayout)
@@ -51,6 +50,16 @@ class ShoeListFragment: Fragment() {
             shoeView.findViewById<TextView>(R.id.brandText).text = shoe.brand
             shoeView.findViewById<TextView>(R.id.descriptionText).text = shoe.description
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.overflow_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
 }

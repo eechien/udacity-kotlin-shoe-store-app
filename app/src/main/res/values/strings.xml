@@ -32,4 +32,5 @@
     <string name="shoe_description_text">Description</string>
     <string name="add_images_button_text">Add Images</string>
     <string name="instructions_button_text">Instructions</string>
+    <string name="logout_menu_item">Logout</string>
 </resources>

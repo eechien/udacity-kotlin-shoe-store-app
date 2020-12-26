@@ -1,15 +1,11 @@
 package com.udacity.shoestore
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentInstructionsBinding
-import com.udacity.shoestore.shoelist.ShoeListViewModel
 
 class InstructionsFragment : Fragment() {
 

@@ -16,8 +16,6 @@ class WelcomeFragment : Fragment() {
 
     private lateinit var binding: FragmentWelcomeBinding
 
-    private val userViewModel: UserViewModel by activityViewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater,container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,10 +24,6 @@ class WelcomeFragment : Fragment() {
             inflater, R.layout.fragment_welcome, container, false
         )
         val navController = findNavController()
-
-        if (userViewModel.user.value == null) {
-            navController.navigate(R.id.loginFragment)
-        }
 
         binding.instructionsButton.setOnClickListener { view ->
             navController.navigate(R.id.action_welcomeFragment_to_instructionsFragment)
