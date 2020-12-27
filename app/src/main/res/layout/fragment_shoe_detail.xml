@@ -36,18 +36,14 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/shoeSizeTextInputLayout"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="199dp">
-
-            <TextView
-                android:id="@+id/shoeNameText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/shoe_name_text" />
+            tools:layout_editor_absoluteX="199dp"
+            android:background="@android:drawable/editbox_background">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/shoeNameInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/shoe_name_text"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -55,14 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@id/shoeBrandTextInputLayout"
-            app:layout_constraintTop_toBottomOf="@id/shoeNameTextInputLayout">
-
-            <TextView
-                android:id="@+id/shoeSizeText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/shoe_size_text" />
+            app:layout_constraintTop_toBottomOf="@id/shoeNameTextInputLayout"
+            android:background="@android:drawable/editbox_background">
 
             <EditText
                 android:id="@+id/shoeSizeInput"
@@ -70,7 +60,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:hint="@string/shoe_size_text"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,19 +70,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/shoeDescriptionTextInputLayout"
-            app:layout_constraintTop_toBottomOf="@+id/shoeSizeTextInputLayout">
-
-            <TextView
-                android:id="@+id/shoeBrandText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/shoe_brand_text" />
+            app:layout_constraintTop_toBottomOf="@+id/shoeSizeTextInputLayout"
+            android:background="@android:drawable/editbox_background">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/shoeBrandInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/shoe_brand_text"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -100,19 +86,14 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/saveShoeButton"
             app:layout_constraintTop_toBottomOf="@+id/shoeBrandTextInputLayout"
-            tools:layout_editor_absoluteX="0dp">
-
-            <TextView
-                android:id="@+id/shoeDescriptionText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/shoe_description_text" />
+            tools:layout_editor_absoluteX="0dp"
+            android:background="@android:drawable/editbox_background">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/shoeDescriptionInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:hint="@string/shoe_description_text"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
