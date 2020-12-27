@@ -26,7 +26,8 @@ class ShoeDetailFragment: Fragment() {
                 container,
                 false
         )
-        binding.lifecycleOwner = this // TODO what is this for?
+        binding.lifecycleOwner = this
+        binding.shoe = Shoe()
 
         val navController = findNavController()
 
@@ -34,12 +35,7 @@ class ShoeDetailFragment: Fragment() {
             navController.navigateUp()
         }
         binding.saveShoeButton.setOnClickListener { view ->
-            val shoe = Shoe(
-                binding.shoeNameInput.text.toString(),
-                binding.shoeSizeInput.text.toString().toDouble(), // REALLY??
-                binding.shoeBrandInput.text.toString(),
-                binding.shoeDescriptionInput.text.toString()
-            )
+            val shoe = binding.shoe
             viewModel.addShoe(shoe)
             navController.navigateUp()
         }
