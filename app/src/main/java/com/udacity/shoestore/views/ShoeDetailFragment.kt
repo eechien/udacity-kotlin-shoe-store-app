@@ -12,12 +12,12 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.ShoeListViewModel
+import com.udacity.shoestore.ShoeViewModel
 
 class ShoeDetailFragment: Fragment() {
 
     private lateinit var binding: FragmentShoeDetailBinding
-    private val viewModel: ShoeListViewModel by activityViewModels()
+    private val viewModel: ShoeViewModel by activityViewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -29,14 +29,12 @@ class ShoeDetailFragment: Fragment() {
         )
         binding.lifecycleOwner = this
         binding.shoe = Shoe()
+        binding.shoeViewModel = viewModel
 
         val navController = findNavController()
 
         binding.cancelButton.setOnClickListener { view ->
             navController.navigateUp()
-        }
-        binding.saveShoeButton.setOnClickListener { view ->
-            viewModel.addShoe(binding.shoe)
         }
 
         viewModel.eventShoeAdded.observe(viewLifecycleOwner, { shoeAdded ->

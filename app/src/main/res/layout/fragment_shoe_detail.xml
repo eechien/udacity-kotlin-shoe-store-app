@@ -7,6 +7,9 @@
         <variable
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.ShoeViewModel"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -102,6 +105,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/cancelButton" />
+            app:layout_constraintStart_toEndOf="@+id/cancelButton"
+            android:onClick="@{() -> shoeViewModel.addShoe(shoe)}"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

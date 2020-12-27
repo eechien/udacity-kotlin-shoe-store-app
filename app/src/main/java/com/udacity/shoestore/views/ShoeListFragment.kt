@@ -13,11 +13,11 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ShoeItemBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.ShoeListViewModel
+import com.udacity.shoestore.ShoeViewModel
 
 class ShoeListFragment: Fragment() {
 
-    private val viewModel: ShoeListViewModel by activityViewModels()
+    private val viewModel: ShoeViewModel by activityViewModels()
 
     private lateinit var binding: FragmentShoeListBinding
     private lateinit var navController: NavController
@@ -32,7 +32,7 @@ class ShoeListFragment: Fragment() {
                 false
         )
         navController = findNavController()
-        binding.shoeListViewModel = viewModel
+        binding.shoeViewModel = viewModel
         binding.lifecycleOwner = this
 
         binding.addShoeButton.setOnClickListener { view ->

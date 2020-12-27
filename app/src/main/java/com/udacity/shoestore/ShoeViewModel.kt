@@ -6,7 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
 
-class ShoeListViewModel : ViewModel() {
+class ShoeViewModel : ViewModel() {
 
     private val shoesList = mutableListOf<Shoe>()
 
