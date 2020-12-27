@@ -7,6 +7,7 @@
     <string name="create_account_button_text">Create Account</string>
     <string name="email_text">Email Address:</string>
     <string name="password_text">Password:</string>
+    <string name="login_label">Login</string>
 
     <!-- Welcome fragment -->
     <string name="welcome_text">Welcome to the Shoe Store</string>
@@ -14,14 +15,17 @@
         In this app you can view an inventory of your shoes,
         add, update, and remove shoes from that inventory.
     </string>
+    <string name="welcome_label">Welcome</string>
 
     <!-- Instructions fragment -->
     <string name="instructions_text">Instructions</string>
     <string name="instructions_description_text">Do some things...</string>
     <string name="view_shoes_button_text">View Shoes</string>
+    <string name="instructions_label">Instructions</string>
 
     <!-- Shoe List fragment -->
     <string name="view_shoe_button_text">View Shoe</string>
+    <string name="shoe_list_label">View shoes</string>
 
     <!-- Shoe detail fragment -->
     <string name="save_changes_button_text">Save Shoe</string>
@@ -33,4 +37,5 @@
     <string name="add_images_button_text">Add Images</string>
     <string name="instructions_button_text">Instructions</string>
     <string name="logout_menu_item">Logout</string>
+    <string name="shoe_detail_label">View shoe</string>
 </resources>
