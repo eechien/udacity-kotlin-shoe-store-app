@@ -1,8 +1,7 @@
-package com.udacity.shoestore.shoelist
+package com.udacity.shoestore.views
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -14,7 +13,7 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ShoeItemBinding
 import com.udacity.shoestore.models.Shoe
-import kotlinx.android.synthetic.main.fragment_shoe_list.*
+import com.udacity.shoestore.ShoeListViewModel
 
 class ShoeListFragment: Fragment() {
 

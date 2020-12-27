@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.udacity.shoestore.WelcomeFragment">
+        tools:context="com.udacity.shoestore.views.WelcomeFragment">
         <!-- TODO make pretty -->
         <TextView
             android:id="@+id/welcomeTextView"

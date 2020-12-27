@@ -1,4 +1,4 @@
-package com.udacity.shoestore.shoe
+package com.udacity.shoestore.views
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.shoelist.ShoeListViewModel
+import com.udacity.shoestore.ShoeListViewModel
 
 class ShoeDetailFragment: Fragment() {
     // init with shoe details or empty shoe to create a new one
