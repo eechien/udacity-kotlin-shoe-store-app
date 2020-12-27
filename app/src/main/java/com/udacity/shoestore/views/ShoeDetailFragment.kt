@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -14,7 +15,7 @@ import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.ShoeListViewModel
 
 class ShoeDetailFragment: Fragment() {
-    // init with shoe details or empty shoe to create a new one
+
     private lateinit var binding: FragmentShoeDetailBinding
     private val viewModel: ShoeListViewModel by activityViewModels()
 
@@ -35,10 +36,20 @@ class ShoeDetailFragment: Fragment() {
             navController.navigateUp()
         }
         binding.saveShoeButton.setOnClickListener { view ->
-            val shoe = binding.shoe
-            viewModel.addShoe(shoe)
-            navController.navigateUp()
+            viewModel.addShoe(binding.shoe)
         }
+
+        viewModel.eventShoeAdded.observe(viewLifecycleOwner, { shoeAdded ->
+            if (shoeAdded) {
+                viewModel.addShoeComplete()
+                navController.navigateUp()
+            }
+        })
+        viewModel.errorMessage.observe(viewLifecycleOwner, { error ->
+            if (error != "") {
+                Toast.makeText(this.context, error, Toast.LENGTH_LONG).show()
+            }
+        })
 
         return binding.root
     }
