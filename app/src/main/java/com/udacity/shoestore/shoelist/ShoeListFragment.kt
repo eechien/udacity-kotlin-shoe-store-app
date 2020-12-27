@@ -12,6 +12,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.databinding.ShoeItemBinding
+import com.udacity.shoestore.models.Shoe
+import kotlinx.android.synthetic.main.fragment_shoe_list.*
 
 class ShoeListFragment: Fragment() {
 
@@ -37,18 +40,24 @@ class ShoeListFragment: Fragment() {
             navController.navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
         }
 
-        addShoes()
+        viewModel.shoes.observe(viewLifecycleOwner, { newList ->
+            addShoes(newList)
+        })
+
         return binding.root
     }
 
-    private fun addShoes() { // tODO change this to a listener
-        var linearLayout= binding.shoeListLinearLayoutView
-        for (shoe in viewModel.shoeList.value!!) {
-            var shoeView = View.inflate(linearLayout.context, R.layout.shoe_item, linearLayout)
-            shoeView.findViewById<TextView>(R.id.nameText).text = shoe.name
-            shoeView.findViewById<TextView>(R.id.sizeText).text = shoe.size.toString()
-            shoeView.findViewById<TextView>(R.id.brandText).text = shoe.brand
-            shoeView.findViewById<TextView>(R.id.descriptionText).text = shoe.description
+    private fun addShoes(shoes: List<Shoe>) { // tODO change this to a listener
+        var linearLayout = binding.shoeListLinearLayoutView
+        for (shoe in shoes) {
+            val shoeItemLayoutBinding = DataBindingUtil.inflate<ShoeItemBinding>(
+                LayoutInflater.from(requireContext()),
+                R.layout.shoe_item,
+                linearLayout,
+                false
+            )
+            shoeItemLayoutBinding.shoe = shoe
+            linearLayout.addView(shoeItemLayoutBinding.root)
         }
     }
 
