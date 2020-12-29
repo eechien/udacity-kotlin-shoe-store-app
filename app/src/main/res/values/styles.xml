@@ -21,11 +21,11 @@
         <item name="android:textColor">@android:color/black</item>
     </style>
 
-    <style name="FragmentTitleTextStyle" parent="TextStyle">
+    <style name="TitleTextStyle" parent="TextStyle">
         <item name="android:textSize">@dimen/titleTextSize</item>
     </style>
 
-    <style name="FragmentDescriptionTextStyle" parent="TextStyle">
+    <style name="DescriptionTextStyle" parent="TextStyle">
         <item name="android:textSize">@dimen/textSize</item>
     </style>
 

@@ -9,16 +9,20 @@
     <string name="login_label">Shoe Store</string>
 
     <!-- Welcome fragment -->
-    <string name="welcome_text">Welcome to the Shoe Store</string>
+    <string name="welcome_text">Welcome</string>
     <string name="welcome_description_text">
-        In this app you can view an inventory of your shoes,
-        add, update, and remove shoes from that inventory.
+        In this app you can view an inventory of your shoes, add, update, and remove shoes from that inventory.
     </string>
     <string name="welcome_label">Welcome</string>
 
     <!-- Instructions fragment -->
     <string name="instructions_text">Instructions</string>
-    <string name="instructions_description_text">Do some things...</string>
+    <string name="instructions_description_text">
+        Click "View Shoes" to see your shoe inventory.
+        From the shoe list page you can add shoes.
+        Include the name of the shoe, its size, the brand,
+        and give it a description. Then Save the shoe to see it in your inventory.
+    </string>
     <string name="view_shoes_button_text">View Shoes</string>
     <string name="instructions_label">Instructions</string>
 

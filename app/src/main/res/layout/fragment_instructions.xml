@@ -10,24 +10,27 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView3"
-            style="@style/FragmentTitleTextStyle"
+            android:id="@+id/instructionsTitleTextView"
+            style="@style/TitleTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/instructions_text"
+            app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/instructionsDescriptionTextView"/>
 
         <TextView
-            android:id="@+id/textView4"
-            style="@style/FragmentDescriptionTextStyle"
+            android:id="@+id/instructionsDescriptionTextView"
+            style="@style/DescriptionTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/instructions_description_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/instructionsTitleTextView"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <Button
             android:id="@+id/viewShoesButton"
@@ -35,6 +38,7 @@
             android:layout_height="wrap_content"
             android:text="@string/view_shoes_button_text"
             style="@style/ButtonStyle"
+            app:layout_constraintTop_toBottomOf="@+id/instructionsDescriptionTextView"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
