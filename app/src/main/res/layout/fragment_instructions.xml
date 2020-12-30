@@ -4,6 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!--
+    Using ConstraintLayout to display the header and description in the center.
+    Then the button is displayed in the center of the space below the description.
+    -->
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/layoutEdge"
         android:layout_width="match_parent"

@@ -20,6 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <!-- Linear layout here because it is part of the requirements but also because we want
+            to display the CardView from the top of the screen. Each Card will be the width of the
+            screen and each card goes directly below the last one. -->
             <LinearLayout
                 android:id="@+id/shoeListLinearLayoutView"
                 android:layout_width="match_parent"
