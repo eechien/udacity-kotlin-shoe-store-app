@@ -19,9 +19,8 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_login, container, false
-        )
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        
         val navController = findNavController()
 
         binding.loginButton.setOnClickListener{ view: View ->
