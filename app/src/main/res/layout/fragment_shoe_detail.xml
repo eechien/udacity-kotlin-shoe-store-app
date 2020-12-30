@@ -12,6 +12,10 @@
             type="com.udacity.shoestore.ShoeViewModel"/>
     </data>
 
+    <!--
+    Using constraint layout for chaining of the input fields and for the buttons so that
+    They're displayed evenly vertically.
+     -->
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/layoutEdge"
         android:layout_width="match_parent"

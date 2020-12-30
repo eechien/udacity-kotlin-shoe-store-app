@@ -5,6 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Using ConstraintLayout to display the Email and Password fields in the middle of the
+    view. Login and Create Account are a chain below that and centered in the space below the
+    password.-->
     <androidx.constraintlayout.widget.ConstraintLayout
         style="@style/layoutEdge"
         android:layout_width="match_parent"
