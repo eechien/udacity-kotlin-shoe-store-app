@@ -27,14 +27,15 @@ class ShoeDetailFragment: Fragment() {
                 container,
                 false
         )
-        binding.lifecycleOwner = this
-        binding.shoe = Shoe()
-        binding.shoeViewModel = viewModel
-
         val navController = findNavController()
 
-        binding.cancelButton.setOnClickListener { view ->
-            navController.navigateUp()
+        with(binding) {
+            lifecycleOwner = this@ShoeDetailFragment
+            shoe = Shoe()
+            shoeViewModel = viewModel
+            cancelButton.setOnClickListener {
+                navController.navigateUp()
+            }
         }
 
         viewModel.eventShoeAdded.observe(viewLifecycleOwner, { shoeAdded ->

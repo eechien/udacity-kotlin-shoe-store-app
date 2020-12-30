@@ -19,16 +19,17 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_login, container, false
-        )
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        
         val navController = findNavController()
 
-        binding.loginButton.setOnClickListener{ view: View ->
-            navController.navigate(R.id.welcomeFragment)
-        }
-        binding.createAccountButton.setOnClickListener{ view: View ->
-            navController.navigate(R.id.welcomeFragment)
+        with(binding) {
+            loginButton.setOnClickListener{ view: View ->
+                navController.navigate(R.id.welcomeFragment)
+            }
+            createAccountButton.setOnClickListener{ view: View ->
+                navController.navigate(R.id.welcomeFragment)
+            }
         }
         return binding.root
     }

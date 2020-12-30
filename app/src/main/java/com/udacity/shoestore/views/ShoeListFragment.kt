@@ -32,11 +32,12 @@ class ShoeListFragment: Fragment() {
                 false
         )
         navController = findNavController()
-        binding.shoeViewModel = viewModel
-        binding.lifecycleOwner = this
-
-        binding.addShoeButton.setOnClickListener { view ->
-            navController.navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
+        with(binding) {
+            lifecycleOwner = this@ShoeListFragment
+            shoeViewModel = viewModel
+            addShoeButton.setOnClickListener { view ->
+                navController.navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
+            }
         }
 
         viewModel.shoes.observe(viewLifecycleOwner, { newList ->
