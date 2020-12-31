@@ -10,6 +10,7 @@
         <variable
             name="shoeViewModel"
             type="com.udacity.shoestore.ShoeViewModel"/>
+        <import type="com.udacity.shoestore.Converter"/>
     </data>
 
     <!--
@@ -55,7 +56,7 @@
                 android:ems="10"
                 android:inputType="numberDecimal"
                 android:hint="@string/shoe_size_text"
-                android:text="@={`` + shoe.size}"/>
+                android:text="@={Converter.doubleToString(shoe.size)}"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
