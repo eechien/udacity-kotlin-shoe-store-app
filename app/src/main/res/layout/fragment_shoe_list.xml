@@ -23,6 +23,9 @@
             <!-- Linear layout here because it is part of the requirements but also because we want
             to display the CardView from the top of the screen. Each Card will be the width of the
             screen and each card goes directly below the last one. -->
+            <!-- The last reviewer suggested removing the LinearLayout because
+            "it's not adding anything important to the view", but ScrollView can
+            only hold one child, so I think I do actually need the LinearLayout...-->
             <LinearLayout
                 android:id="@+id/shoeListLinearLayoutView"
                 android:layout_width="match_parent"
