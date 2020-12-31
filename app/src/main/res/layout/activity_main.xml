@@ -17,6 +17,9 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Using LinearLayout here because we want the Toolbar above the Fragment views and don't
+    need anything more complicated than that. The layout is not highly nested so ConstraintLayout
+    isn't more performant in this case. -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
